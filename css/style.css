@@ -1,0 +1,469 @@
+/* Genel Stiller */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #e0e0e0;
+    background-color: #121212;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Stili */
+.header {
+    position: fixed;
+    width: 100%;
+    background-color: rgba(25, 25, 25, 0.95);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #8a2be2;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #e0e0e0;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #8a2be2;
+}
+
+/* Hero Bölümü */
+.hero {
+    height: 100vh;
+    background: linear-gradient(135deg, #8a2be2, #191919);
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.hero-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.hero-content {
+    text-align: left;
+    max-width: 600px;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.button-group {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #8a2be2;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    background-color: #9b4dff;
+    box-shadow: 0 5px 15px rgba(138, 43, 226, 0.4);
+}
+
+.cv-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: transparent;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    border: 2px solid #8a2be2;
+    transition: all 0.3s ease;
+}
+
+.cv-button:hover {
+    transform: translateY(-3px);
+    background-color: #8a2be2;
+    box-shadow: 0 5px 15px rgba(138, 43, 226, 0.4);
+}
+
+.profile-image {
+    width: 350px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-image-container {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: #2a2a2a;
+    border: 5px solid #8a2be2;
+    box-shadow: 0 0 20px rgba(138, 43, 226, 0.5);
+    overflow: hidden;
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Hakkımda Bölümü */
+.about {
+    padding: 5rem 0;
+    background-color: #1e1e1e;
+}
+
+.about h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #8a2be2;
+}
+
+.about-content {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.about-text {
+    max-width: 600px;
+}
+
+.skills {
+    margin-top: 2rem;
+}
+
+.skills h3 {
+    margin-bottom: 1rem;
+    color: #8a2be2;
+}
+
+.skills ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.skills li {
+    background-color: #8a2be2;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+}
+
+/* Projeler Bölümü */
+.projects {
+    padding: 5rem 0;
+    background-color: #121212;
+}
+
+.projects h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #8a2be2;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(138, 43, 226, 0.3);
+}
+
+.project-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    height: 100%;
+    cursor: pointer;
+}
+
+.project-image {
+    height: 250px;
+    background-color: #2a2a2a;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-img {
+    transform: scale(1.05);
+}
+
+/* Kod Önizleme Stilleri */
+.code-preview {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #1a1a1a;
+    font-family: 'Consolas', 'Monaco', monospace;
+}
+
+.code-header {
+    display: flex;
+    align-items: center;
+    padding: 8px 15px;
+    background-color: #252525;
+    border-bottom: 1px solid #333;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 6px;
+}
+
+.red {
+    background-color: #ff5f56;
+}
+
+.yellow {
+    background-color: #ffbd2e;
+}
+
+.green {
+    background-color: #27c93f;
+}
+
+.file-name {
+    margin-left: 10px;
+    font-size: 0.9rem;
+    color: #ddd;
+}
+
+.code-content {
+    flex: 1;
+    padding: 15px;
+    overflow: auto;
+}
+
+.code-content pre {
+    margin: 0;
+}
+
+.code-content code {
+    color: #e0e0e0;
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+.project-card h3 {
+    padding: 1rem;
+    color: #8a2be2;
+}
+
+.project-card p {
+    padding: 0 1rem 1rem;
+    color: #b0b0b0;
+}
+
+/* İletişim Bölümü */
+.contact {
+    padding: 5rem 0;
+    background-color: #1e1e1e;
+}
+
+.contact h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #8a2be2;
+}
+
+.contact-content {
+    display: flex;
+    justify-content: center;
+}
+
+.contact-info {
+    text-align: center;
+}
+
+.contact-item {
+    margin-bottom: 1.5rem;
+}
+
+.contact-item i {
+    font-size: 1.5rem;
+    color: #8a2be2;
+    margin-bottom: 0.5rem;
+}
+
+.contact-button {
+    margin-bottom: 2rem;
+}
+
+.email-button {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: #8a2be2;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.email-button:hover {
+    background-color: #9b4dff;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(138, 43, 226, 0.4);
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.social-link {
+    color: #8a2be2;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    transform: translateY(-3px);
+    color: #9b4dff;
+    text-shadow: 0 0 10px rgba(138, 43, 226, 0.5);
+}
+
+/* Footer Bölümü */
+.footer {
+    background-color: #191919;
+    color: #b0b0b0;
+    text-align: center;
+    padding: 1.5rem 0;
+}
+
+/* Responsive Tasarım */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .nav-links {
+        margin-top: 1rem;
+        gap: 1rem;
+    }
+
+    .hero-container {
+        flex-direction: column-reverse;
+        padding: 2rem 0;
+    }
+
+    .hero-content {
+        text-align: center;
+        margin-top: 2rem;
+    }
+
+    .button-group {
+        justify-content: center;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+
+    .profile-image {
+        width: 250px;
+        height: 250px;
+        margin-bottom: 1rem;
+    }
+
+    .profile-image-container {
+        width: 200px;
+        height: 200px;
+    }
+
+    .about-content {
+        flex-direction: column;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .code-content code {
+        font-size: 0.75rem;
+    }
+} 
